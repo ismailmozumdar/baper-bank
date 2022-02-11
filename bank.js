@@ -1,15 +1,23 @@
-document.getElementById('Submit-btn').addEventListener('click', function(){
-    //get uder email
-    const emailfild = document.getElementById('user-email');
-    const userEmail = emailfild.value;
-    //get uder password
-    const passFild = document.getElementById('user-pass');
-    const userPass = passFild.value;
-    if (userEmail == 'sontan@gmail.com' && userPass == 'secret'){
-        window.location.href = 'banking.html'
-    }
-    else(
-        console.log('this email and password not mas')
-    )
+// get same money
 
+
+
+// --------------------Deposit-------------------
+document.getElementById('Deposit-btn').addEventListener('click', function(){
+    const depositInput = document.getElementById('Deposit-input');
+    const depositAmount = depositInput.value
+    console.log(depositAmount);
+
+    const Deposittotal = document.getElementById('Deposit-total');
+    Deposittotal.innerText = depositAmount;
+    depositInput.value = '';
+})
+
+
+
+// --------------Withdraw--------------------
+document.getElementById('Withdraw-btn').addEventListener('click', function(){
+    const WithdrawInput = document.getElementById('Withdraw-input');
+    const WithdrawAmount = WithdrawInput.value
+    console.log(WithdrawAmount);
 })
